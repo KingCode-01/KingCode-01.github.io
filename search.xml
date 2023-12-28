@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2023/12/29/GRUB%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0Windows11%E5%BC%95%E5%AF%BC%E9%A1%B9/</url>
+    <content><![CDATA[<h1 id="GRUB手动添加Windows-11-引导项"><a href="#GRUB手动添加Windows-11-引导项" class="headerlink" title="GRUB手动添加Windows 11 引导项"></a>GRUB手动添加Windows 11 引导项</h1><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看UUID 找到你的windows UUID XXXX-XXXX</span></span><br><span class="line">sudo blkid </span><br><span class="line">sudo blkid /dev/xxx</span><br><span class="line"><span class="comment"># TYPE=&quot;vfat&quot; 表示分区类型</span></span><br><span class="line"><span class="comment"># 切记grub.cfg 保存退出就好 千万不要轻易碰触 grub-mkconfig -o /boot/grub/grub.cfg 这道命令</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/imges/GRUB%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0Windows11%E5%BC%95%E5%AF%BC%E9%A1%B9/Untitled.png"
+                      alt="img"
+                ></p>
+<p>vim &#x2F;boot&#x2F;grub&#x2F;grub.cfg 添加以下配置 </p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">menuentry <span class="string">&#x27;ZingCode Microsoft Windows 11&#x27;</span> &#123;</span><br><span class="line">        insmod part_gpt</span><br><span class="line">        insmod fat</span><br><span class="line">        insmod chain</span><br><span class="line">        search --fs-uuid --no-floppy --<span class="built_in">set</span>=root XXXX-XXXX  <span class="comment"># &lt;- XXXX-XXXX your windows EFI partion UUID</span></span><br><span class="line">        chainloader (<span class="variable">$&#123;root&#125;</span>)/EFI/Microsoft/Boot/bootmgfw.efi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/imges/GRUB%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0Windows11%E5%BC%95%E5%AF%BC%E9%A1%B9/Untitled1.png"
+                      alt="img"
+                ></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Windows 内网渗透-信息收集</title>
     <url>/2023/12/28/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</url>
     <content><![CDATA[<p>type: Post<br>status: Published<br>date: 2023&#x2F;12&#x2F;24<br>tags: web安全<br>category: 学习思考</p>
