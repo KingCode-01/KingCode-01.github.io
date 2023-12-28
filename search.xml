@@ -3,7 +3,8 @@
   <entry>
     <title></title>
     <url>/2023/12/29/GRUB%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0Windows11%E5%BC%95%E5%AF%BC%E9%A1%B9/</url>
-    <content><![CDATA[<h1 id="GRUB手动添加Windows-11-引导项"><a href="#GRUB手动添加Windows-11-引导项" class="headerlink" title="GRUB手动添加Windows 11 引导项"></a>GRUB手动添加Windows 11 引导项</h1><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看UUID 找到你的windows UUID XXXX-XXXX</span></span><br><span class="line">sudo blkid </span><br><span class="line">sudo blkid /dev/xxx</span><br><span class="line"><span class="comment"># TYPE=&quot;vfat&quot; 表示分区类型</span></span><br><span class="line"><span class="comment"># 切记grub.cfg 保存退出就好 千万不要轻易碰触 grub-mkconfig -o /boot/grub/grub.cfg 这道命令</span></span><br></pre></td></tr></table></figure></div>
+    <content><![CDATA[<hr>
+<h2 id="GRUB手动添加Windows-11-引导项"><a href="#GRUB手动添加Windows-11-引导项" class="headerlink" title="GRUB手动添加Windows 11 引导项"></a>GRUB手动添加Windows 11 引导项</h2><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看UUID 找到你的windows UUID XXXX-XXXX</span></span><br><span class="line">sudo blkid </span><br><span class="line">sudo blkid /dev/xxx</span><br><span class="line"><span class="comment"># TYPE=&quot;vfat&quot; 表示分区类型</span></span><br><span class="line"><span class="comment"># 切记grub.cfg 保存退出就好 千万不要轻易碰触 grub-mkconfig -o /boot/grub/grub.cfg 这道命令</span></span><br></pre></td></tr></table></figure></div>
 
 <p><img  
                      lazyload
