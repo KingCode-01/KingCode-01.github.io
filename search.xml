@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title>Windows 内网渗透-信息收集</title>
     <url>/2023/12/28/Windows%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</url>
-    <content><![CDATA[<h1 id="Windows-内网渗透-信息收集"><a href="#Windows-内网渗透-信息收集" class="headerlink" title="Windows 内网渗透-信息收集"></a>Windows 内网渗透-信息收集</h1><p>type: Post<br>status: Published<br>date: 2023&#x2F;12&#x2F;24<br>tags: web安全<br>category: 学习思考</p>
+    <content><![CDATA[<p>type: Post<br>status: Published<br>date: 2023&#x2F;12&#x2F;24<br>tags: web安全<br>category: 学习思考</p>
 <p>运行指令</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">shutdown -s                          # 自动关机</span><br><span class="line">shutdown -s -t 600                   # 表示600秒后自动关机</span><br><span class="line">shutdown -a                          # 取消定时关机</span><br><span class="line">shutdown -r -t 600                   # 表示600秒后自动重启</span><br><span class="line">rundll32 user32.dll,LockWorkStation  # 表示锁定计算机</span><br><span class="line">calc                                 # 计算器</span><br><span class="line">appwiz.cpl                           # 程序和功能，卸载</span><br><span class="line">cleanmgr                             # 磁盘清理工具</span><br><span class="line">compmgmt.msc                         # 计算机管理</span><br><span class="line">control                              # 控制面版</span><br><span class="line">desk.cpl                             # 屏幕分辨率设置</span><br><span class="line">explorer                             # 资源管理器</span><br><span class="line">firewall.cpl                         # Windows防火墙设置</span><br><span class="line">inetcpl.cpl                          # Internet属性</span><br><span class="line">intl.cpl                             # 设置区域和时间格式</span><br><span class="line">msinfo32                             # 查看系统详细信息</span><br><span class="line">mspaint                              # 画图</span><br><span class="line">notepad                              # 记事本</span><br><span class="line">osk                                  # 屏幕键盘</span><br><span class="line">perfmon                              # 计算机性能监测器</span><br><span class="line">powercfg.cpl                         # 电源管理选项</span><br><span class="line">rasphone                             # 网络连接</span><br><span class="line">regedt32/regedit.exe                 # 注册表编辑器</span><br><span class="line">services.msc                         # 本地服务</span><br><span class="line">slui                                 # 系统激活信息</span><br><span class="line">snippingtool                         # 截图工具，支持无规则截图</span><br><span class="line">sysdm.cpl                            # 系统属性</span><br><span class="line">timedate.cpl                         # 日期和时间设置</span><br><span class="line">winver                               # 关于Windows</span><br><span class="line">taskmgr                              # 任务管理器</span><br></pre></td></tr></table></figure></div>
 
@@ -74,7 +74,8 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">\Windows\System32</span><br><span class="line">C:\Windows\System32\drivers\etc\hosts</span><br><span class="line"># SAM 记录着系统的账号和密码</span><br><span class="line">C:\Windows\System32\config\SAM</span><br></pre></td></tr></table></figure></div>
 
 <p>禁用一些拦截操作的软件服务</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sc config &quot;service_name service_name2 ...&quot; start=disable</span><br><span class="line">reboot  # 重启系统后服务将不会自启</span><br></pre></td></tr></table></figure></div>]]></content>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sc config &quot;service_name service_name2 ...&quot; start=disable</span><br><span class="line">reboot  # 重启系统后服务将不会自启</span><br></pre></td></tr></table></figure></div>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
